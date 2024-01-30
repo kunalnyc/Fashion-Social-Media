@@ -1,3 +1,4 @@
+import 'package:fashion_media/Screens/home_page.dart';
 import 'package:flutter/cupertino.dart';
 
 class CupertinoTabBars extends StatefulWidget {
@@ -43,7 +44,7 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
 
         switch (index) {
           case 0:
-            page = HomePage();
+            page = const HomePage();
             break;
           case 1:
             page = DiscoverPage();
@@ -76,29 +77,17 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
   }
 }
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('Home'),
-      ),
-      child: Center(
-        child: Text('Home Content'),
-      ),
-    );
-  }
-}
+
 
 class DiscoverPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return const CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text('Discover'),
       ),
       child: Center(
-        child: Text('Discover Content'),
+        child: Text('Discover Contentsss'),
       ),
     );
   }

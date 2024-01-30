@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
         trailing: IconButton(
           onPressed: () {},
           icon: const Icon(
-            CupertinoIcons.add,
-            color: CupertinoColors.systemPurple,
+            CupertinoIcons.ellipsis_vertical,
+            color: CupertinoColors.black,size: 20,
           ),
         ),
         backgroundColor: CupertinoColors.white,
