@@ -1,8 +1,9 @@
+import 'package:fashion_media/UI/bottom_navbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {},
           icon: const Icon(
             CupertinoIcons.add,
-            color: CupertinoColors.black,
+            color: CupertinoColors.systemPurple,
           ),
         ),
         backgroundColor: CupertinoColors.white,
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
               'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D'),
         ),
       ),
-      child: Container(),
+      child: const CupertinoTabBars(),
     );
   }
 }
