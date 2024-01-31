@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CustomButtonBar extends StatelessWidget {
-  const CustomButtonBar({super.key,});
+class CustomButtonBar1 extends StatelessWidget {
+  const CustomButtonBar1({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class CustomButtonBar extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
               child: Text(
-                "New Fashion",
+                "Add From Collection",
                 style: TextStyle(
                   color: Theme.of(context).brightness == Brightness.light
                       ? CupertinoColors.darkBackgroundGray
