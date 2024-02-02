@@ -12,6 +12,7 @@ class CupertinoTabBars extends StatefulWidget {
 }
 
 class _CupertinoTabBarsState extends State<CupertinoTabBars> {
+   
   @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
@@ -48,7 +49,7 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
             page = const HomePage1();
             break;
           case 1:
-            page = const GroupScreen();
+            page =  const GroupScreen();
             break;
           case 2:
             page = FriendsPage();

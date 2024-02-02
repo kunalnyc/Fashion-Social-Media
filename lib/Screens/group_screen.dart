@@ -1,8 +1,11 @@
+import 'package:fashion_media/Data/group_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GroupScreen extends StatefulWidget {
-  const GroupScreen({Key? key}) : super(key: key);
+  const GroupScreen({
+    super.key,
+  });
 
   @override
   State<GroupScreen> createState() => _GroupScreenState();
@@ -42,8 +45,14 @@ class _GroupScreenState extends State<GroupScreen> {
             ),
             const Padding(
               padding: EdgeInsets.all(18.0),
-              child: Text('Public Groups'),
-            )
+              child: Text(
+                'Public Groups',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            //Calling group interface class
+            //Droup Details & Joi Button
+            GroupInterface()
           ],
         ),
       ),
