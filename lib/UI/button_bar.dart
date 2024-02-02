@@ -1,3 +1,4 @@
+import 'package:fashion_media/functions/image_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,10 @@ class CustomButtonBar extends StatelessWidget {
           borderRadius: BorderRadius.circular(30.0),
           color: Colors.transparent,
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+             const PickImageFromGallery().pickAndNavigate(context);
+
+            },
             style: TextButton.styleFrom(
               backgroundColor: Colors.transparent,
               shape: RoundedRectangleBorder(

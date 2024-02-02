@@ -9,6 +9,7 @@ class FashionScreen extends StatefulWidget {
   State<FashionScreen> createState() => _FashionScreenState();
 }
 
+// ignore: unused_element
 final TextEditingController _textController = TextEditingController();
 
 class _FashionScreenState extends State<FashionScreen> {
@@ -34,8 +35,8 @@ class _FashionScreenState extends State<FashionScreen> {
               ),
             ],
           ),
-         CustomButtonBar(),
-         CustomButtonBar1(),
+          CustomButtonBar(),
+          CustomButtonBar1(),
         ],
       ),
     );
