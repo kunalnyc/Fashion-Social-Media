@@ -1,4 +1,6 @@
 import 'package:fashion_media/Data/group_data.dart';
+import 'package:fashion_media/Screens/Closet/fashion.dart';
+import 'package:fashion_media/Screens/create_group.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +38,8 @@ class _GroupScreenState extends State<GroupScreen> {
               child: Container(), // Replace with your content or remove it
             ),
             CupertinoListTile(
-              onTap: () {},
+              onTap: () => Navigator.of(context).push(
+                  CupertinoPageRoute(builder: (context) => const NewGroup())),
               leading: const Icon(
                 CupertinoIcons.person_add,
                 color: CupertinoColors.black,
