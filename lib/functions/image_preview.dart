@@ -18,7 +18,7 @@ class ImagePreview extends StatelessWidget {
       child: Card(
         elevation: 10,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(50),
         ),
         child: ClipRect(
           child: Image.file(

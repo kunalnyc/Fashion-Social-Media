@@ -1,3 +1,4 @@
+import 'package:fashion_media/Screens/fashion_feed.dart';
 import 'package:fashion_media/Screens/group_screen.dart';
 import 'package:fashion_media/Screens/home_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,7 +13,6 @@ class CupertinoTabBars extends StatefulWidget {
 }
 
 class _CupertinoTabBarsState extends State<CupertinoTabBars> {
-   
   @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
@@ -28,8 +28,8 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
             label: 'Groups',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.wind_snow),
-            label: 'Explore',
+            icon: Icon(CupertinoIcons.at),
+            label: 'Mentions',
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.heart),
@@ -49,10 +49,10 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
             page = const HomePage1();
             break;
           case 1:
-            page =  const GroupScreen();
+            page = const GroupScreen();
             break;
           case 2:
-            page = FriendsPage();
+            page = const FashionFeed();
             break;
           case 3:
             page = KeypadPage();
