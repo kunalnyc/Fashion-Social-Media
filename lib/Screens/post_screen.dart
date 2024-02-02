@@ -1,7 +1,5 @@
-import 'package:fashion_media/UI/button_bar.dart';
-import 'package:fashion_media/UI/button_bar1.dart';
+import 'package:fashion_media/UI/Buttons/custom_button.dart';
 import 'package:fashion_media/UI/custom_field.dart';
-import 'package:fashion_media/functions/Text/text_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -37,9 +35,13 @@ class _NewPostState extends State<NewPost> {
           ),
           Row(
             children: [
-               CustomTextField(),
+              CustomTextField(),
             ],
-          )
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const PostButton()
         ],
       ),
     );
