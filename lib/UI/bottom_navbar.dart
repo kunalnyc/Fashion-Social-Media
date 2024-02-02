@@ -1,3 +1,4 @@
+import 'package:fashion_media/Screens/group_screen.dart';
 import 'package:fashion_media/Screens/home_page.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -44,10 +45,10 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
 
         switch (index) {
           case 0:
-            page = const HomePage();
+            page = const HomePage1();
             break;
           case 1:
-            page = DiscoverPage();
+            page = const GroupScreen();
             break;
           case 2:
             page = FriendsPage();
@@ -76,8 +77,6 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
     );
   }
 }
-
-
 
 class DiscoverPage extends StatelessWidget {
   @override

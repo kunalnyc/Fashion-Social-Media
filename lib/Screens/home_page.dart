@@ -3,20 +3,38 @@ import 'package:fashion_media/Screens/post_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage1 extends StatefulWidget {
+  const HomePage1({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage1> createState() => _HomePage1State();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePage1State extends State<HomePage1> {
   final String name = "Emersion";
 
   @override
   Widget build(BuildContext context) {
     bool isHeart = false;
     return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: const Text(
+          'Fashion Media',
+        ),
+        trailing: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            CupertinoIcons.search,
+            color: CupertinoColors.black,
+            size: 20,
+          ),
+        ),
+        backgroundColor: CupertinoColors.white,
+        leading: const CircleAvatar(
+          backgroundImage: NetworkImage(
+              'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D'),
+        ),
+      ),
       child: SingleChildScrollView(
         child: Column(
           children: [
