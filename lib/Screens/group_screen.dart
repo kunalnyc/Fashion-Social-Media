@@ -1,5 +1,4 @@
 import 'package:fashion_media/Data/group_data.dart';
-import 'package:fashion_media/Screens/Closet/fashion.dart';
 import 'package:fashion_media/Screens/create_group.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

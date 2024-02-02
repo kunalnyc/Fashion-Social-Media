@@ -11,10 +11,13 @@ class PickImageFromGallery extends StatefulWidget {
   Future<void> pickAndNavigate(BuildContext context) async {
     final pickedImage = await _pickImage();
     if (pickedImage != null) {
+      // Convert XFile to PickedFile
+      final pickedFile = PickedFile(pickedImage.path);
+
       // ignore: use_build_context_synchronously
       Navigator.of(context).push(
         CupertinoPageRoute(
-          builder: (context) => ImagePreview(pickedImage as PickedFile),
+          builder: (context) => ImagePreview(pickedFile),
         ),
       );
     } else {
