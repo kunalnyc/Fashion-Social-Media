@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class PickImageFromGallery extends StatefulWidget {
-  const PickImageFromGallery({super.key,});
+  const PickImageFromGallery({
+    super.key,
+  });
 
   Future<void> pickAndNavigate(BuildContext context) async {
     final pickedImage = await _pickImage();
@@ -16,10 +18,22 @@ class PickImageFromGallery extends StatefulWidget {
         ),
       );
     } else {
-      // Handle the case where no image was selected
-      // ignore: use_build_context_synchronously
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('No image selected')),
+      await showDialog(
+        // ignore: use_build_context_synchronously
+        context: context,
+        builder: (BuildContext context) {
+          return CupertinoAlertDialog(
+            content: const Text('No Image Selected'),
+            actions: [
+              CupertinoDialogAction(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text('OK'),
+              ),
+            ],
+          );
+        },
       );
     }
   }

@@ -1,4 +1,5 @@
 import 'package:fashion_media/Screens/Closet/fashion.dart';
+import 'package:fashion_media/Screens/post_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -214,7 +215,7 @@ class _HomePageState extends State<HomePage> {
           CupertinoActionSheetAction(
             onPressed: () {
               Navigator.of(context).push(CupertinoPageRoute(
-                  builder: (context) => const FashionScreen()));
+                  builder: (context) => const NewPost()));
             },
             child: const Text('New Post'),
           ),
