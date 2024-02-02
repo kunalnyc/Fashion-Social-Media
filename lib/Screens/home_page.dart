@@ -213,9 +213,13 @@ class _HomePageState extends State<HomePage> {
             child: const Text('Add Fashion'),
           ),
           CupertinoActionSheetAction(
-            onPressed: () {
-              Navigator.of(context).push(CupertinoPageRoute(
-                  builder: (context) => const NewPost()));
+            onPressed: () async {
+              await Future.delayed(const Duration(seconds: 0));
+              // ignore: use_build_context_synchronously
+              Navigator.pop(context);
+              // ignore: use_build_context_synchronously
+              Navigator.of(context).push(
+                  CupertinoPageRoute(builder: (context) => const NewPost()));
             },
             child: const Text('New Post'),
           ),

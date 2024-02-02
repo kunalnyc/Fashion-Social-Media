@@ -15,6 +15,7 @@ class _NewPostState extends State<NewPost> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: const CupertinoNavigationBar(
+        automaticallyImplyLeading: true,
         middle: Text('New Post'),
       ),
       child: Column(
@@ -25,9 +26,17 @@ class _NewPostState extends State<NewPost> {
                 height: 230,
               ),
               Padding(
+                padding: EdgeInsets.all(10.0),
+                child: CircleAvatar(
+                  radius: 15.0,
+                  backgroundImage: NetworkImage(
+                      'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D'),
+                ),
+              ),
+              Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  'Welcome! Add New Post',
+                  'Welcome, Add New Post!',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
               ),
