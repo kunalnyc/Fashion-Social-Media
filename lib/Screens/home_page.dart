@@ -1,5 +1,6 @@
 import 'package:fashion_media/Screens/Closet/fashion.dart';
 import 'package:fashion_media/Screens/post_screen.dart';
+import 'package:fashion_media/Screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -27,7 +28,10 @@ class _HomePage1State extends State<HomePage1> {
           'Fashion Media',
         ),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+                CupertinoPageRoute(builder: (context) => const SearchScreen()));
+          },
           icon: const Icon(
             CupertinoIcons.search,
             color: CupertinoColors.black,
