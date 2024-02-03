@@ -26,7 +26,8 @@ class _FashionFeedState extends State<FashionFeed> {
             )),
       ),
       child: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics()),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,8 +61,7 @@ class _FashionFeedState extends State<FashionFeed> {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.only(left: 12.0, right: 10),
-                    child: Text(
-                        'Hey, Guys Checkout my new COLLECTION!'),
+                    child: Text('Hey, Guys Checkout my new COLLECTION!'),
                   ),
                 ),
               ],
@@ -337,7 +337,7 @@ class _FashionFeedState extends State<FashionFeed> {
                 ),
               ],
             ),
-               Row(
+            Row(
               children: [
                 const Padding(
                   padding: EdgeInsets.all(10.0),
@@ -365,8 +365,7 @@ class _FashionFeedState extends State<FashionFeed> {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.only(left: 12.0, right: 10),
-                    child: Text(
-                        'Hey, Guys Checkout my new COLLECTION!'),
+                    child: Text('Hey, Guys Checkout my new COLLECTION!'),
                   ),
                 ),
               ],

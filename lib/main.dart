@@ -1,4 +1,4 @@
-import 'package:fashion_media/UI/bottom_navbar.dart';
+import 'package:fashion_media/Screens/home.dart';
 import 'package:flutter/cupertino.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Fashion Media',
         theme: CupertinoThemeData(brightness: Brightness.light),
-        home: CupertinoTabBars());
+        home: HomePage());
   }
 }
 
