@@ -17,6 +17,7 @@ class _FashionScreenState extends State<FashionScreen> {
   Widget build(BuildContext context) {
     return const CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        middle: Text('Fashion'),
         automaticallyImplyLeading: true,
       ),
       child: Column(

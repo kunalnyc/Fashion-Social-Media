@@ -1,10 +1,16 @@
+import 'dart:io';
+
 import 'package:fashion_media/Screens/Closet/fashion.dart';
 import 'package:fashion_media/Screens/post_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
+// ignore: must_be_immutable
 class HomePage1 extends StatefulWidget {
-  const HomePage1({super.key});
+  const HomePage1({
+    super.key,
+  });
 
   @override
   State<HomePage1> createState() => _HomePage1State();
@@ -12,6 +18,8 @@ class HomePage1 extends StatefulWidget {
 
 class _HomePage1State extends State<HomePage1> {
   final String name = "Emersion";
+  // Define or load the savedImage in this class
+
 
   @override
   Widget build(BuildContext context) {
@@ -204,6 +212,12 @@ class _HomePage1State extends State<HomePage1> {
                 ],
               ),
             ),
+
+            ///Class the Saved Image here
+            // ... Existing code ...
+          
+ 
+            // ... Continue with the rest of your UI ...
           ],
         ),
       ),

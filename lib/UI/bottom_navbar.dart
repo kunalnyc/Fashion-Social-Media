@@ -1,3 +1,4 @@
+
 import 'package:fashion_media/Screens/chat_screen.dart';
 import 'package:fashion_media/Screens/fashion_feed.dart';
 import 'package:fashion_media/Screens/group_screen.dart';
@@ -46,10 +47,9 @@ class _CupertinoTabBarsState extends State<CupertinoTabBars> {
         ),
         tabBuilder: (BuildContext context, int index) {
           late Widget page;
-
           switch (index) {
             case 0:
-              page = const HomePage1();
+              page =   const HomePage1();
               break;
             case 1:
               page = const GroupScreen();
