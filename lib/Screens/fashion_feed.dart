@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class FashionFeed extends StatefulWidget {
@@ -7,6 +8,8 @@ class FashionFeed extends StatefulWidget {
   @override
   State<FashionFeed> createState() => _FashionFeedState();
 }
+
+bool isHeart = false;
 
 class _FashionFeedState extends State<FashionFeed> {
   @override
@@ -67,10 +70,27 @@ class _FashionFeedState extends State<FashionFeed> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        CupertinoIcons.heart,
-                        color: CupertinoColors.black,
+                      onPressed: () {
+                        setState(() {
+                          if (isHeart) {
+                            setState(() {
+                              isHeart = !isHeart; // Toggle the isHeart state
+                            });
+                          } else {
+                            setState(() {
+                              isHeart = true;
+                            });
+                          }
+                        });
+                        // isHeart = false;
+                      },
+                      icon: Icon(
+                        isHeart
+                            ? CupertinoIcons.heart_fill
+                            : CupertinoIcons.heart,
+                        color: isHeart
+                            ? CupertinoColors.systemPink
+                            : CupertinoColors.black,
                         size: 20,
                       )),
                 ),
