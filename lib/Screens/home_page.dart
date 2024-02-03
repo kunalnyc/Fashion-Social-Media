@@ -1,10 +1,8 @@
-import 'dart:io';
-
 import 'package:fashion_media/Screens/Closet/fashion.dart';
 import 'package:fashion_media/Screens/post_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:flutter/widgets.dart';
 
 // ignore: must_be_immutable
 class HomePage1 extends StatefulWidget {
@@ -19,7 +17,6 @@ class HomePage1 extends StatefulWidget {
 class _HomePage1State extends State<HomePage1> {
   final String name = "Emersion";
   // Define or load the savedImage in this class
-
 
   @override
   Widget build(BuildContext context) {
@@ -215,9 +212,110 @@ class _HomePage1State extends State<HomePage1> {
 
             ///Class the Saved Image here
             // ... Existing code ...
-          
- 
-            // ... Continue with the rest of your UI ...
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Row(
+                children: [
+                  const SizedBox(width: 16),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Card(
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Image.network(
+                            'https://images.unsplash.com/photo-1613915617430-8ab0fd7c6baf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww',
+                            fit: BoxFit.cover,
+                            width: 355,
+                            height: 400,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Row(
+                          children: [
+                            const Text(
+                              'New Fashion',
+                              style: TextStyle(fontWeight: FontWeight.w400),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  isHeart = !isHeart;
+                                });
+                              },
+                              icon: const Icon(
+                                CupertinoIcons.heart,
+                                color: CupertinoColors.black,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                ],
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Row(
+                children: [
+                  const SizedBox(width: 16),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Card(
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Image.network(
+                            'https://plus.unsplash.com/premium_photo-1682125353819-b3b168a8abaf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fHww',
+                            fit: BoxFit.cover,
+                            width: 355,
+                            height: 400,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Row(
+                          children: [
+                            const Text(
+                              'Fashionable Women in Sun Glasses',
+                              style: TextStyle(fontWeight: FontWeight.w400),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  isHeart = !isHeart;
+                                });
+                              },
+                              icon: const Icon(
+                                CupertinoIcons.heart,
+                                color: CupertinoColors.black,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                ],
+              ),
+            )
           ],
         ),
       ),

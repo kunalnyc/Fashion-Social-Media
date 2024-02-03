@@ -37,6 +37,7 @@ class _FashionScreenState extends State<FashionScreen> {
             ],
           ),
           CustomButtonBar(),
+          //Custom Button BAr
           CustomButtonBar1(),
         ],
       ),

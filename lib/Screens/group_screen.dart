@@ -1,5 +1,6 @@
 import 'package:fashion_media/Data/group_data.dart';
 import 'package:fashion_media/Screens/create_group.dart';
+import 'package:fashion_media/functions/group_photo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,9 @@ class _GroupScreenState extends State<GroupScreen> {
       navigationBar: CupertinoNavigationBar(
         middle: const Text('Groups'),
         trailing: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _showActionSheet(context);
+            },
             icon: const Icon(
               CupertinoIcons.add,
               color: CupertinoColors.black,
@@ -37,8 +40,7 @@ class _GroupScreenState extends State<GroupScreen> {
               child: Container(), // Replace with your content or remove it
             ),
             CupertinoListTile(
-              onTap: () => Navigator.of(context).push(
-                  CupertinoPageRoute(builder: (context) => const NewGroup())),
+              onTap: () => _showActionSheet(context),
               leading: const Icon(
                 CupertinoIcons.person_add,
                 color: CupertinoColors.black,
@@ -57,6 +59,50 @@ class _GroupScreenState extends State<GroupScreen> {
             GroupInterface()
           ],
         ),
+      ),
+    );
+  }
+
+  void _showActionSheet(BuildContext context) {
+    showCupertinoModalPopup<void>(
+      context: context,
+      builder: (BuildContext context) => CupertinoActionSheet(
+        title: const Text('Manage Groups'),
+        message: const Text(
+            'Create Groups add & invite peoples, leave silently, Create Communities, borrow fashionable things!'),
+        actions: <CupertinoActionSheetAction>[
+          CupertinoActionSheetAction(
+            onPressed: () async {
+              await Future.delayed(const Duration(seconds: 0));
+              // ignore: use_build_context_synchronously
+              Navigator.pop(context);
+              // ignore: use_build_context_synchronously
+              Navigator.of(context).push(
+                  CupertinoPageRoute(builder: (context) => const NewGroup()));
+            },
+            child: const Text('New Group'),
+          ),
+          CupertinoActionSheetAction(
+            //  isDefaultAction: true,
+            onPressed: () {
+              // await Future.delayed(const Duration(seconds: 0));
+              // // ignore: use_build_context_synchronously
+              // Navigator.pop(context);
+              // // ignore: use_build_context_synchronously
+              // Navigator.of(context).push(CupertinoPageRoute(
+              //     builder: (context) => const FashionScreen()));
+            },
+            child: const Text('New Community'),
+          ),
+
+          // CupertinoActionSheetAction(
+          //   isDestructiveAction: true,
+          //   onPressed: () {
+          //     Navigator.pop(context);
+          //   },
+          //   child: const Text('Close'),
+          // ),
+        ],
       ),
     );
   }
