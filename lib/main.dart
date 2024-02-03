@@ -1,4 +1,3 @@
-import 'package:fashion_media/Screens/home.dart';
 import 'package:fashion_media/Screens/welcome_screen.dart';
 import 'package:flutter/cupertino.dart';
 

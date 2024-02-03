@@ -3,7 +3,6 @@ import 'package:fashion_media/Screens/chat_screen.dart';
 import 'package:fashion_media/Screens/fashion_feed.dart';
 import 'package:fashion_media/Screens/group_screen.dart';
 import 'package:fashion_media/Screens/heart.dart';
-import 'package:fashion_media/Screens/heart_page.dart';
 import 'package:fashion_media/Screens/home_page.dart';
 import 'package:flutter/cupertino.dart';
 

@@ -1,6 +1,4 @@
-import 'package:fashion_media/Screens/fashion_feed.dart';
 import 'package:fashion_media/UI/Buttons/button_bar4.dart';
-import 'package:fashion_media/UI/buttonbar3.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -165,6 +163,13 @@ class _SvaedHeartScreenState extends State<SvaedHeartScreen> {
               Navigator.pop(context);
             },
             child: const Text('My Collections'),
+          ),
+          CupertinoActionSheetAction(
+            onPressed: () {
+              // Handle action 1
+              Navigator.pop(context);
+            },
+            child: const Text('Create Closet'),
           ),
           CupertinoActionSheetAction(
             onPressed: () {
