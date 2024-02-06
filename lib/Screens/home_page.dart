@@ -52,7 +52,7 @@ class _HomePage1State extends State<HomePage1> {
                 Padding(
                   padding: const EdgeInsets.only(top: 30, left: 24),
                   child: SizedBox(
-                    width: 200, // Adjust the width according to your needs
+                    width: 200, 
                     child: Text(
                       'Hi, $name!',
                       style: const TextStyle(
@@ -214,8 +214,7 @@ class _HomePage1State extends State<HomePage1> {
               ),
             ),
 
-            ///Class the Saved Image here
-            // ... Existing code ...
+         
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Row(

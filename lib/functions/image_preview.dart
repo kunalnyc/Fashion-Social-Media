@@ -33,7 +33,7 @@ class _ImagePreviewState extends State<ImagePreview> {
         ),
         child: ClipRect(
           child: Image.file(
-            File(widget.pickedFile.path), // Access the path property directly
+            File(widget.pickedFile.path),
             fit: BoxFit.cover,
           ),
         ),

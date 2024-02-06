@@ -36,7 +36,7 @@ class _GroupScreenState extends State<GroupScreen> {
           children: [
             SizedBox(
               height: 10,
-              child: Container(), // Replace with your content or remove it
+              child: Container(), 
             ),
             CupertinoListTile(
               onTap: () => _showActionSheet(context),

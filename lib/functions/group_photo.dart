@@ -23,7 +23,7 @@ class _ProfilePictureWithEditButtonState
           ),
           CircleAvatar(
             radius: 50,
-            backgroundColor: Colors.grey[200], // Add a light background color
+            backgroundColor: Colors.grey[200], 
             backgroundImage: const NetworkImage(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6CMh7vqQdDdTr5MnlOCH3WNa8g6Rxj2_Q78dPLnl5ROn9Vhv5bsEs1LqGjb0iYUUbVEg&usqp=CAU'),
           ),
